@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/04 22:15:10 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/09/13 16:04:47 by waboutzo         ###   ########.fr       */
+/*   Created: 2022/09/15 12:56:38 by waboutzo          #+#    #+#             */
+/*   Updated: 2022/09/15 18:51:26 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Zombie.hpp"
 
-char	*str_toupper(char *str)
+int main(void)
 {
-	for (int i = 0; str[i]; i++)
 	{
-		if (islower(str[i]))
-			str[i] = toupper(str[i]);
+		Zombie *zombie;
+		zombie = zombieHorde( 7, "Foo");
+		for(int i = 0; i < 7; i++)
+			std::cout << "zombie " << i << " named : " <<zombie[i].name_getter() << std::endl;
+		delete [] zombie;
 	}
-	return (str);
-}
-
-int	main(int argc, char **argv)
-{
-	if(argc > 1)
-	{
-		for(int i = 1; i < argc; i++)
-			std::cout << str_toupper(argv[i]);
-		std::cout << std::endl;
-	}
+	system("leaks programe");
 	return (0);
 }

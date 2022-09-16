@@ -1,6 +1,6 @@
-NAME	= Account
+NAME	= programe
 
-SRC		= Account.cpp tests.cpp
+SRC		= main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 
 OBJ		= ${SRC:.cpp=.o}
 

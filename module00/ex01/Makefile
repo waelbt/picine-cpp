@@ -1,7 +1,5 @@
 NAME	= phonebook
 
-CFLAGS	= -Wall -Wextra -Werror -std=c++98
-
 SRC		= Contact.cpp PhoneBook.cpp main.cpp
 
 OBJ		= ${SRC:.cpp=.o}
@@ -13,7 +11,7 @@ RM		= rm -rf
 all	: $(NAME)
 
 ${NAME}	: ${OBJ}
-	c++ $(CFLAGS) $(OBJ) -o $(NAME)
+	c++ $(CPPFLAGS) $(OBJ) -o $(NAME)
 
 clean   :
 	${RM} ${OBJ}

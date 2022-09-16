@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 23:40:47 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/09/13 11:04:33 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/09/13 16:09:19 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Contact::Contact()
 	//std::cout << "default contact constructor\n" << std::endl;
 }
 
-int Contact::index_getter()
+int Contact::index_getter() const
 {
 	return index;
 }
@@ -27,7 +27,7 @@ void Contact::index_setter(int ids)
 	index = ids;
 }
 
-std::string Contact::phone_number_getter(int flag)
+std::string Contact::phone_number_getter(int flag) const
 {
 	std::string saver;
 
@@ -45,7 +45,7 @@ void Contact::phone_number_setter(std::string num)
 	phone_number = num;
 }
 
-std::string Contact::fname_getter(int flag)
+std::string Contact::fname_getter(int flag) const
 {
 	std::string saver;
 
@@ -63,7 +63,7 @@ void Contact::fname_setter(std::string str)
 	first_name = str;
 }
 
-std::string Contact::lname_getter(int flag)
+std::string Contact::lname_getter(int flag) const
 {
 	std::string saver;
 
@@ -81,7 +81,7 @@ void Contact::lname_setter(std::string str)
 	last_name = str;
 }
 
-std::string Contact::nickname_getter(int flag)
+std::string Contact::nickname_getter(int flag) const
 {
 	std::string saver;
 
@@ -99,7 +99,7 @@ void Contact::nickname_setter(std::string str)
 	nickname = str;
 }
 
-std::string Contact::darkest_secret_getter(int flag)
+std::string Contact::darkest_secret_getter(int flag) const
 {
 	std::string saver;
 

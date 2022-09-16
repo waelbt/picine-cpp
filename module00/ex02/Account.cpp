@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 11:19:07 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/09/13 10:24:56 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/09/13 15:14:08 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,9 @@ int		Account::checkAmount( void ) const
 void	Account::displayAccountsInfos( void )
 {
 	_displayTimestamp();
-	std::cout <<  "accounts:" << _nbAccounts  << ";total:" 
-	<< _totalAmount << ";deposits:" << _totalNbDeposits 
-	<< ";withdrawals:" << _totalNbWithdrawals<< std::endl;	
+	std::cout <<  "accounts:" << Account::getNbAccounts()  << ";total:" 
+	<< getTotalAmount() << ";deposits:" << Account::getNbDeposits() 
+	<< ";withdrawals:" << Account::getNbWithdrawals() << std::endl;	
 }
 
 void	Account::displayStatus( void ) const

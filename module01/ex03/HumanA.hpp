@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/04 22:15:10 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/09/13 16:04:47 by waboutzo         ###   ########.fr       */
+/*   Created: 2022/09/15 15:24:16 by waboutzo          #+#    #+#             */
+/*   Updated: 2022/09/15 18:00:18 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#ifndef HUMANA_HPP
+#define HUMANA_HPP
 
-char	*str_toupper(char *str)
-{
-	for (int i = 0; str[i]; i++)
-	{
-		if (islower(str[i]))
-			str[i] = toupper(str[i]);
-	}
-	return (str);
-}
+#include "Weapon.hpp"
 
-int	main(int argc, char **argv)
+class HumanA
 {
-	if(argc > 1)
-	{
-		for(int i = 1; i < argc; i++)
-			std::cout << str_toupper(argv[i]);
-		std::cout << std::endl;
-	}
-	return (0);
-}
+	private:
+		std::string _name;
+		Weapon& _weapon;
+	public:
+		HumanA(std::string name, Weapon &weapon);
+		void attack(void);
+};
+
+#endif

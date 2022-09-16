@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/04 22:15:10 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/09/13 16:04:47 by waboutzo         ###   ########.fr       */
+/*   Created: 2022/09/15 15:24:27 by waboutzo          #+#    #+#             */
+/*   Updated: 2022/09/15 18:19:54 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef WEAPON_HPP
+#define WEAPON_HPP
+
 #include <iostream>
 
-char	*str_toupper(char *str)
+class Weapon
 {
-	for (int i = 0; str[i]; i++)
-	{
-		if (islower(str[i]))
-			str[i] = toupper(str[i]);
-	}
-	return (str);
-}
+	private :
+		std::string type;
+	public :
+		Weapon();
+		Weapon(std::string type);
+		~Weapon();
+		std::string getType( void );
+		void		setType(std::string type);
+};
 
-int	main(int argc, char **argv)
-{
-	if(argc > 1)
-	{
-		for(int i = 1; i < argc; i++)
-			std::cout << str_toupper(argv[i]);
-		std::cout << std::endl;
-	}
-	return (0);
-}
+#endif

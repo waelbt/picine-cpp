@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/04 22:15:10 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/09/13 16:04:47 by waboutzo         ###   ########.fr       */
+/*   Created: 2022/09/15 15:24:14 by waboutzo          #+#    #+#             */
+/*   Updated: 2022/09/15 18:42:52 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "HumanB.hpp"
 
-char	*str_toupper(char *str)
+
+HumanB::HumanB(std::string name)
 {
-	for (int i = 0; str[i]; i++)
-	{
-		if (islower(str[i]))
-			str[i] = toupper(str[i]);
-	}
-	return (str);
+	_name = name;
+	_weapon = NULL;
 }
 
-int	main(int argc, char **argv)
+void HumanB::setWeapon(Weapon& weapon)
 {
-	if(argc > 1)
-	{
-		for(int i = 1; i < argc; i++)
-			std::cout << str_toupper(argv[i]);
-		std::cout << std::endl;
-	}
-	return (0);
+	_weapon = &weapon;
+}
+
+void HumanB::attack(void)
+{
+	std::cout << _name << " attack with " 
+	<<  _weapon->getType() << std::endl;
 }

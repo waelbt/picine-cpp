@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/04 22:15:10 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/09/13 16:04:47 by waboutzo         ###   ########.fr       */
+/*   Created: 2022/09/15 11:09:53 by waboutzo          #+#    #+#             */
+/*   Updated: 2022/09/15 18:50:42 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Zombie.hpp"
 
-char	*str_toupper(char *str)
+int main(void)
 {
-	for (int i = 0; str[i]; i++)
 	{
-		if (islower(str[i]))
-			str[i] = toupper(str[i]);
+		randomChump("Foo");
+		Zombie *zombie = NULL;
+		zombie = newZombie("Ziiii");
+		zombie->announce();
+		delete(zombie);
 	}
-	return (str);
-}
-
-int	main(int argc, char **argv)
-{
-	if(argc > 1)
-	{
-		for(int i = 1; i < argc; i++)
-			std::cout << str_toupper(argv[i]);
-		std::cout << std::endl;
-	}
+	system("leaks programe");
 	return (0);
 }

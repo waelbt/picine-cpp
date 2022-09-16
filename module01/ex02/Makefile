@@ -1,6 +1,6 @@
-NAME	= Account
+NAME	= programe
 
-SRC		= Account.cpp tests.cpp
+SRC		= main.cpp
 
 OBJ		= ${SRC:.cpp=.o}
 
