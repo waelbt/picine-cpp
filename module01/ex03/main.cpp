@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 15:24:03 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/09/15 18:52:41 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/09/17 17:28:08 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,5 @@ int main()
 		club.setType("some other type of club");
 		jim.attack();
 	}
-	system("leaks programe");
 return 0;
 }

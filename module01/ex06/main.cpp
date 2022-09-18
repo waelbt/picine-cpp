@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/15 15:24:27 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/09/17 13:02:14 by waboutzo         ###   ########.fr       */
+/*   Created: 2022/09/16 18:38:00 by waboutzo          #+#    #+#             */
+/*   Updated: 2022/09/17 20:51:15 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_HPP
-#define WEAPON_HPP
+#include "Harl.hpp"
 
-#include <iostream>
-
-class Weapon
+int main(int argc, char **argv)
 {
-	private :
-		std::string type;
-	public :
-		Weapon();
-		Weapon(std::string type);
-		~Weapon();
-		std::string const &getType( void ) const;
-		void		setType(std::string type);
-};
+	Harl harl;
 
-#endif
+	if (argc == 1)
+	{
+		std::cout << "[ zero complaine, wow that's not normal ]" << std::endl;
+		return (1);
+	}
+	harl.complain(argv[1]);
+	return (0);
+}

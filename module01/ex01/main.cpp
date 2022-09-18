@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 12:56:38 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/09/15 18:51:26 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/09/17 23:00:20 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,12 @@
 
 int main(void)
 {
-	{
-		Zombie *zombie;
-		zombie = zombieHorde( 7, "Foo");
-		for(int i = 0; i < 7; i++)
-			std::cout << "zombie " << i << " named : " <<zombie[i].name_getter() << std::endl;
-		delete [] zombie;
-	}
-	system("leaks programe");
+	Zombie *zombie = NULL;
+
+	zombie = zombieHorde( 7, "Foo");
+	for(int i = 0; i < 7; i++)
+		zombie[i].announce();
+	delete [] zombie;
+	zombie = NULL;
 	return (0);
 }

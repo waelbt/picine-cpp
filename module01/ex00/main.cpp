@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 11:09:53 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/09/15 18:50:42 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/09/17 17:25:19 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 int main(void)
 {
-	{
-		randomChump("Foo");
-		Zombie *zombie = NULL;
-		zombie = newZombie("Ziiii");
-		zombie->announce();
-		delete(zombie);
-	}
-	system("leaks programe");
+	Zombie *zombie = NULL;
+
+	randomChump("Foo");
+	
+	zombie = newZombie("Ziiii");
+	zombie->announce();
+	delete(zombie);
+	zombie = NULL;
 	return (0);
 }

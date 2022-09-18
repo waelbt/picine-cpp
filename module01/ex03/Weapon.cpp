@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 15:24:25 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/09/15 18:16:07 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/09/17 13:04:01 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Weapon::Weapon(std::string type)
 	this->type = type;
 }
 
-std::string Weapon::getType(void)
+std::string const &Weapon::getType(void) const
 {
 	return type;
 }

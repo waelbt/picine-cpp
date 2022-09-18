@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 11:10:23 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/09/15 12:54:33 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/09/17 12:18:15 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 Zombie* newZombie(std::string name)
 {
-	Zombie *Zomb = NULL;
+	Zombie *zombie = NULL;
 
-	Zomb = new Zombie(name);
-	return 	(Zomb);
+	zombie = new Zombie(name);
+	return 	(zombie);
 }
