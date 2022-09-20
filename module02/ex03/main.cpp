@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 22:44:26 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/09/20 15:21:14 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/09/20 21:56:54 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 
 int main(void)
 {
-	Point point(2.5, 3.1);
-	Point p(point);
-	std::cout << p.getx() << std::endl;
-	std::cout << p.gety() << std::endl;
+	Point a(15, 15);
+	Point b(23,30);
+	Point c(50, 25);
+	Point point(50,25);
+	std::cout.setf(std::ios::boolalpha);
+	std::cout << bsp(a, b, c, point) << std::endl;
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 22:43:55 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/09/20 15:35:22 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/09/20 20:20:58 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,30 +16,30 @@ const int Fixed::_bits = 8;
 
 Fixed::Fixed() : _raw(0)
 {
-	std::cout << "Default constructor called" << std::endl;
+	//std::cout << "Default constructor called" << std::endl;
 }
 
 Fixed::Fixed(const int integer)
 {
 	_raw = integer << _bits;
-	std::cout << "Int constructor called" << std::endl;
+	//std::cout << "Int constructor called" << std::endl;
 }
 
 Fixed::Fixed(const float number)
 {
 	_raw = roundf(number*(float)(1<<_bits));
-	std::cout << "Float constructor called " << std::endl;
+	//std::cout << "Float constructor called " << std::endl;
 }
 
 Fixed::Fixed(const Fixed& obj)
 {
-	std::cout << "Copy constructor called" << std::endl;
+	//std::cout << "Copy constructor called" << std::endl;
 	*this = obj;
 }
 
 Fixed& Fixed::operator=(const Fixed& obj)
 {
-	std::cout << "Copy assignment operator called " << std::endl;
+	//std::cout << "Copy assignment operator called " << std::endl;
 	if (this != &obj)
 		_raw = obj.getRawBits();
 	return *this;
@@ -47,7 +47,7 @@ Fixed& Fixed::operator=(const Fixed& obj)
 
 Fixed::~Fixed()
 {
-	std::cout << "Destructor called" << std::endl;
+	//std::cout << "Destructor called" << std::endl;
 }
 
 int Fixed::getRawBits( void ) const
@@ -58,7 +58,7 @@ int Fixed::getRawBits( void ) const
 
 void Fixed::setRawBits( int const raw )
 {
-	std::cout << "setRawBits member function called" << std::endl;
+	//std::cout << "setRawBits member function called" << std::endl;
 	_raw = raw;
 }
 
@@ -75,43 +75,43 @@ float Fixed::toFloat( void ) const
 bool Fixed::operator>(const Fixed& obj)
 {
 	if (_raw > obj._raw)
-		return 1;
-	return 0;
+		return true;
+	return false;
 }
 
 bool Fixed::operator<(const Fixed& obj)
 {
 	if (_raw < obj._raw)
-		return 1;
-	return 0;
+		return true;
+	return false;
 }
 
 bool Fixed::operator>=(const Fixed& obj)
 {
 	if (_raw >= obj._raw)
-		return 1;
-	return 0;
+		return true;
+	return false;
 }
 
 bool Fixed::operator<=(const Fixed& obj)
 {
 	if (_raw <= obj._raw)
-		return 1;
-	return 0;
+		return true;
+	return false;
 }
 
 bool Fixed::operator==(const Fixed& obj)
 {
 	if (_raw == obj._raw)
-		return 1;
-	return 0;
+		return true;
+	return false;
 }
 
 bool Fixed::operator!=(const Fixed& obj)
 {
 	if (_raw == obj._raw)
-		return 1;
-	return 0;
+		return true;
+	return false;
 }
 
 Fixed  Fixed::operator+(const Fixed& obj)

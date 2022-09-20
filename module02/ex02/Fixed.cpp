@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 22:43:44 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/09/20 15:36:35 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/09/20 20:20:22 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,43 +75,43 @@ float Fixed::toFloat( void ) const
 bool Fixed::operator>(const Fixed& obj)
 {
 	if (_raw > obj._raw)
-		return 1;
-	return 0;
+		return true;
+	return false;
 }
 
 bool Fixed::operator<(const Fixed& obj)
 {
 	if (_raw < obj._raw)
-		return 1;
-	return 0;
+		return true;
+	return false;
 }
 
 bool Fixed::operator>=(const Fixed& obj)
 {
 	if (_raw >= obj._raw)
-		return 1;
-	return 0;
+		return true;
+	return false;
 }
 
 bool Fixed::operator<=(const Fixed& obj)
 {
 	if (_raw <= obj._raw)
-		return 1;
-	return 0;
+		return true;
+	return false;
 }
 
 bool Fixed::operator==(const Fixed& obj)
 {
 	if (_raw == obj._raw)
-		return 1;
-	return 0;
+		return true;
+	return false;
 }
 
 bool Fixed::operator!=(const Fixed& obj)
 {
 	if (_raw == obj._raw)
-		return 1;
-	return 0;
+		return true;
+	return false;
 }
 
 Fixed  Fixed::operator+(const Fixed& obj)
