@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 14:21:10 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/09/20 15:46:30 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/09/22 20:50:19 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,20 +31,20 @@ class Fixed
 		void setRawBits( int const raw );
 		float toFloat( void ) const;
 		int toInt( void ) const;
-		bool operator>(const Fixed& obj);
-		bool operator<(const Fixed& obj);
-		bool operator>=(const Fixed& obj);
-		bool operator<=(const Fixed& obj);
-		bool  operator==(const Fixed& obj);
-		bool operator!=(const Fixed& obj);
-		Fixed operator+(const Fixed& obj);
-		Fixed operator-(const Fixed& obj);
-		Fixed operator*(const Fixed& obj);
-		Fixed operator/(const Fixed& obj);
-		Fixed operator++();
-		Fixed operator++( int );
-		Fixed operator--();
-		Fixed operator--( int );
+		bool operator>(const Fixed& obj) const;
+		bool operator<(const Fixed& obj) const;
+		bool operator>=(const Fixed& obj) const;
+		bool operator<=(const Fixed& obj) const;
+		bool  operator==(const Fixed& obj) const;
+		bool operator!=(const Fixed& obj) const;
+		Fixed operator+(const Fixed& obj) const;
+		Fixed operator-(const Fixed& obj) const;
+		Fixed operator*(const Fixed& obj) const;
+		Fixed operator/(const Fixed& obj) const;
+		Fixed& operator++();
+		const Fixed operator++( int );
+		Fixed& operator--();
+		const Fixed operator--( int );
 		static const Fixed& max(const Fixed& obj1, const Fixed& obj2);
 		static Fixed& max(Fixed& obj1, Fixed& obj2);
 		static const Fixed& min(const Fixed& obj1, const Fixed& obj2);

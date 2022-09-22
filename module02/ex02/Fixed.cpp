@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 22:43:44 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/09/20 20:20:22 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/09/22 20:50:01 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,49 +72,49 @@ float Fixed::toFloat( void ) const
 	return ((float)_raw / (float)(1<<_bits));
 }
 
-bool Fixed::operator>(const Fixed& obj)
+bool Fixed::operator>(const Fixed& obj) const
 {
 	if (_raw > obj._raw)
 		return true;
 	return false;
 }
 
-bool Fixed::operator<(const Fixed& obj)
+bool Fixed::operator<(const Fixed& obj) const
 {
 	if (_raw < obj._raw)
 		return true;
 	return false;
 }
 
-bool Fixed::operator>=(const Fixed& obj)
+bool Fixed::operator>=(const Fixed& obj) const
 {
 	if (_raw >= obj._raw)
 		return true;
 	return false;
 }
 
-bool Fixed::operator<=(const Fixed& obj)
+bool Fixed::operator<=(const Fixed& obj) const
 {
 	if (_raw <= obj._raw)
 		return true;
 	return false;
 }
 
-bool Fixed::operator==(const Fixed& obj)
+bool Fixed::operator==(const Fixed& obj) const
 {
 	if (_raw == obj._raw)
 		return true;
 	return false;
 }
 
-bool Fixed::operator!=(const Fixed& obj)
+bool Fixed::operator!=(const Fixed& obj) const
 {
 	if (_raw == obj._raw)
 		return true;
 	return false;
 }
 
-Fixed  Fixed::operator+(const Fixed& obj)
+Fixed  Fixed::operator+(const Fixed& obj) const
 {
 	Fixed tmp;
 
@@ -122,7 +122,7 @@ Fixed  Fixed::operator+(const Fixed& obj)
 	return (tmp);
 }
 
-Fixed  Fixed::operator-(const Fixed& obj)
+Fixed  Fixed::operator-(const Fixed& obj) const
 {
 	Fixed tmp;
 
@@ -130,7 +130,7 @@ Fixed  Fixed::operator-(const Fixed& obj)
 	return (tmp);
 }
 
-Fixed  Fixed::operator*(const Fixed& obj)
+Fixed  Fixed::operator*(const Fixed& obj) const
 {
 	Fixed tmp;
 
@@ -138,7 +138,7 @@ Fixed  Fixed::operator*(const Fixed& obj)
 	return (tmp);
 }
 
-Fixed  Fixed::operator/(const Fixed& obj)
+Fixed  Fixed::operator/(const Fixed& obj) const
 {
 	Fixed tmp;
 
@@ -152,13 +152,13 @@ std::ostream& operator<<(std ::ostream &o, Fixed const & rhs)
 	return o;
 }
 
-Fixed Fixed::operator++()
+Fixed& Fixed::operator++()
 {
 	(*this)._raw++;
 	return (*this);
 }
 
-Fixed Fixed::operator++( int )
+const Fixed Fixed::operator++( int )
 {
 	Fixed temp;
 
@@ -167,13 +167,13 @@ Fixed Fixed::operator++( int )
 	return temp;
 }
 
-Fixed Fixed::operator--()
+Fixed& Fixed::operator--()
 {
 	(*this)._raw--;
 	return (*this);
 }
 
-Fixed Fixed::operator--( int )
+const Fixed Fixed::operator--( int )
 {
 	Fixed temp;
 
