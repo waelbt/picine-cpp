@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 11:18:47 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/09/24 15:57:13 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/09/24 22:16:36 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 #include "ScavTrap.hpp"
 
-/*tarnaj3 l had l main*/
 
 int main(void)
 {

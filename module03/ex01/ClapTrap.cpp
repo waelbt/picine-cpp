@@ -6,13 +6,13 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 11:19:46 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/09/23 19:47:10 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/09/24 22:00:32 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap() : _name("X Æ A-12 Musk"),_hit_points(100),_energy_points(50), _attack_damage(20)
+ClapTrap::ClapTrap() : _name("X Æ A-12 Musk"),_hit_points(10),_energy_points(10), _attack_damage(0)
 {
 	std::cout << "Default ClapTrap constructor called" << std::endl;
 }

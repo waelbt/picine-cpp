@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 15:42:15 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/09/24 15:43:54 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/09/24 22:16:59 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,18 @@
 ScavTrap::ScavTrap()
 {
 	std::cout << "Default ScavTrap constructor called" << std::endl;
+	_hit_points = 100;
+	_energy_points = 50;
+	_attack_damage = 20;
 }
 
 
 ScavTrap::ScavTrap(const std::string name) : ClapTrap(name)
 {
 	std::cout << "ScavTrap " << _name <<" constructor called" << std::endl;
+	_hit_points = 100;
+	_energy_points = 50;
+	_attack_damage = 20;
 }
 
 
@@ -33,8 +39,11 @@ ScavTrap::ScavTrap(const ScavTrap& obj) : ClapTrap(obj)
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& obj)
 {
-	(void) obj;
 	std::cout << "ScavTrap Copy assignment operator called" << std::endl;
+	_name = obj._name;
+	_hit_points = obj._hit_points;
+	_energy_points = obj._energy_points;
+	_attack_damage = obj._attack_damage;
 	return (*this);
 }
 

@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 17:15:51 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/09/24 18:43:02 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/09/24 22:20:58 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,17 @@
 FragTrap::FragTrap()
 {
 	std::cout << "Default FragTrap constructor called" << std::endl;
+	_hit_points = 100;
+	_energy_points = 100;
+	_attack_damage = 30;
 }
 
 FragTrap::FragTrap(const std::string name) : ClapTrap(name) 
 {
 	std::cout << "FragTrap " << _name <<" constructor called" << std::endl;
+	_hit_points = 100;
+	_energy_points = 100;
+	_attack_damage = 30;
 }
 
 FragTrap::FragTrap(const FragTrap& obj) : ClapTrap(obj)
@@ -30,8 +36,11 @@ FragTrap::FragTrap(const FragTrap& obj) : ClapTrap(obj)
 
 FragTrap& FragTrap::operator=(const FragTrap& obj)
 {
-	(void) obj;
 	std::cout << "FragTrap Copy assignment operator called" << std::endl;
+	_name = obj._name;
+	_hit_points = obj._hit_points;
+	_energy_points = obj._energy_points;
+	_attack_damage = obj._attack_damage;
 	return (*this);
 }
 
