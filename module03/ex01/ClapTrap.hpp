@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 11:19:00 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/09/24 22:16:39 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/09/27 02:29:08 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ class ClapTrap
 		virtual void attack(const std::string& target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
-		~ClapTrap();
+		virtual ~ClapTrap();
 };
 #endif

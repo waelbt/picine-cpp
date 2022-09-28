@@ -1,30 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/24 17:15:24 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/09/25 17:43:21 by waboutzo         ###   ########.fr       */
+/*   Created: 2022/09/23 11:18:47 by waboutzo          #+#    #+#             */
+/*   Updated: 2022/09/26 18:08:19 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_CPP
-#define FRAGTRAP_CPP
+#include "DiamondTrap.hpp"
 
-#include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap
+int main(void)
 {
-
-	public:
-		FragTrap();
-		FragTrap(const std::string name);
-		FragTrap(const FragTrap& obj);
-		FragTrap& operator=(const FragTrap& obj);
-		void highFivesGuys(void);
-		~FragTrap();
-};
-
-#endif
+	DiamondTrap Diamond("Diamond");
+	
+	Diamond.whoAmI();
+	return 0;
+}
