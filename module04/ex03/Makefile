@@ -1,6 +1,7 @@
-NAME	= AMateria
+NAME	= Interface
 
-SRC		= main.cpp
+SRC		=	AMateria.cpp Cure.cpp \
+			Ice.cpp MateriaSource.cpp main.cpp
 
 OBJ		= ${SRC:.cpp=.o}
 
