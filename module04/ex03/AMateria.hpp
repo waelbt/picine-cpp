@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 17:44:43 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/01 01:26:53 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/10/01 17:43:29 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class AMateria
 		std::string const & getType() const; //Returns the materia type
 		virtual AMateria* clone() const = 0;
 		virtual void use(ICharacter& target);
-		~AMateria();
+		virtual ~AMateria();
 };
 
 #endif

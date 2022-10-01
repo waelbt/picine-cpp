@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 16:55:24 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/01 01:07:54 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/10/01 17:43:39 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int main()
 	src->learnMateria(new Cure());
 
 
-	Character::garbage_collector();
+	//Character::garbage_collector();
 	// ICharacter* me = new Character("me");
 
 	// AMateria* tmp;

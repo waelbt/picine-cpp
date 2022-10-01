@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 17:46:52 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/09/30 18:58:25 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/10/01 16:45:06 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,11 @@ std::string const & AMateria::getType() const
 	return _type;
 }
 
-// virtual void AMateria::use(ICharacter& target)
-// {}
+void AMateria::use(ICharacter& target)
+{
+	(void) target;
+	printf("ddddd\n");
+}
 
 AMateria::~AMateria()
 {

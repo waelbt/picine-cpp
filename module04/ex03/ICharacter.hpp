@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 19:05:44 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/01 01:20:40 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/10/01 01:40:29 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include "AMateria.hpp"
 #include <iostream>
+class AMateria;
 
 class ICharacter
 {
