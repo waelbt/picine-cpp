@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 16:55:24 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/09/30 18:56:39 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/10/01 01:07:54 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 #include "IMateriaSource.hpp"
 #include "Ice.hpp"
 #include "MateriaSource.hpp"
+#include "Character.hpp"
+#include "ICharacter.hpp"
 
 int main()
 {
@@ -22,6 +24,8 @@ int main()
 	src->learnMateria(new Ice());
 	src->learnMateria(new Cure());
 
+
+	Character::garbage_collector();
 	// ICharacter* me = new Character("me");
 
 	// AMateria* tmp;
