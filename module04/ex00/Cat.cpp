@@ -1,38 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.cpp                                       :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/01 18:42:42 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/01 18:48:48 by waboutzo         ###   ########.fr       */
+/*   Created: 2022/09/29 11:19:05 by waboutzo          #+#    #+#             */
+/*   Updated: 2022/09/29 11:35:03 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AMateria.hpp"
+#include "Cat.hpp"
 
-AMateria::AMateria() : _type("no type yet")
-{}
-
-AMateria::AMateria(AMateria const& obj)
+Cat::Cat()
 {
+	std::cout << "Default Cat constructor called" << std::endl;
+	_type = "Cat";
+}
+
+Cat::Cat(const Cat& obj)
+{
+	std::cout << "Cat Copy constructor called" << std::endl;
 	*this = obj;
 }
 
-AMateria& AMateria::operator=(AMateria const& obj)
+Cat& Cat::operator=(const Cat& obj)
 {
-	(void) obj;
+	std::cout << "Cat Copy assignment operator called" << std::endl;
+	_type = obj._type;
 	return (*this);
 }
 
-AMateria::AMateria(std::string const & type) : _type(type)
-{}
-
-std::string const & AMateria::getType() const
+void Cat::makeSound() const
 {
-	return _type;
+	std::cout << "meow meeow" << std::endl;
 }
 
-AMateria::~AMateria()
-{}
+Cat::~Cat()
+{
+	std::cout << "Cat Destructor called" << std::endl;
+}

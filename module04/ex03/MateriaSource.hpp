@@ -5,21 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/30 18:25:10 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/09/30 18:41:58 by waboutzo         ###   ########.fr       */
+/*   Created: 2022/10/01 18:59:52 by waboutzo          #+#    #+#             */
+/*   Updated: 2022/10/01 19:08:07 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MATERIASOURCE_HPP
 #define MATERIASOURCE_HPP
 
+#include "AMateria.hpp"
 #include "IMateriaSource.hpp"
 
 class MateriaSource : public IMateriaSource
 {
-	protected:
+	private:
 		int _counter;
-		AMateria *_materiaSource[4];
+		AMateria *_materia[4];
 	public:
 		MateriaSource();
 		MateriaSource(MateriaSource const& obj);
@@ -28,4 +29,5 @@ class MateriaSource : public IMateriaSource
 		AMateria* createMateria(std::string const & type);
 		~MateriaSource();
 };
+
 #endif

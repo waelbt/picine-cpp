@@ -5,19 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/30 17:44:43 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/01 17:43:29 by waboutzo         ###   ########.fr       */
+/*   Created: 2022/10/01 18:39:46 by waboutzo          #+#    #+#             */
+/*   Updated: 2022/10/01 18:47:39 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef AMATERIA_HPP
-# define AMATERIA_HPP
+#define AMATERIA_HPP
 
-
+#include "iostream"
 #include "ICharacter.hpp"
-#include "Character.hpp"
-
-# include <iostream>
+class ICharacter;
 
 class AMateria
 {
@@ -28,10 +26,9 @@ class AMateria
 		AMateria(AMateria const& obj);
 		AMateria& operator=(AMateria const& obj);
 		AMateria(std::string const & type);
-		//[...]
-		std::string const & getType() const; //Returns the materia type
+		std::string const & getType() const;
 		virtual AMateria* clone() const = 0;
-		virtual void use(ICharacter& target);
+		virtual void use(ICharacter& target) = 0;
 		virtual ~AMateria();
 };
 

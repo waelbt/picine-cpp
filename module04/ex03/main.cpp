@@ -5,41 +5,49 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/30 16:55:24 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/01 17:43:39 by waboutzo         ###   ########.fr       */
+/*   Created: 2022/10/01 21:32:51 by waboutzo          #+#    #+#             */
+/*   Updated: 2022/10/02 00:08:43 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
-#include "Cure.hpp"
-#include "IMateriaSource.hpp"
-#include "Ice.hpp"
-#include "MateriaSource.hpp"
 #include "Character.hpp"
+#include "Cure.hpp"
+#include "Ice.hpp"
+#include "IMateriaSource.hpp"
 #include "ICharacter.hpp"
+#include "MateriaSource.hpp"
 
-int main()
+int leak_main()
 {
 	IMateriaSource* src = new MateriaSource();
 	src->learnMateria(new Ice());
 	src->learnMateria(new Cure());
 
+	ICharacter* me = new Character("me");
 
-	//Character::garbage_collector();
-	// ICharacter* me = new Character("me");
+	AMateria* tmp;
 
-	// AMateria* tmp;
-	// tmp = src->createMateria("ice");
-	// me->equip(tmp);
-	// tmp = src->createMateria("cure");
-	// me->equip(tmp);
-	// ICharacter* bob = new Character("bob");
+	tmp = src->createMateria("ice");
 
-	// me->use(0, *bob);
-	// me->use(1, *bob);
+	me->equip(tmp);
+	tmp = src->createMateria("cure");
+	me->equip(tmp);
+	me->equip(0);
 
-	// delete bob;
-	// delete me;
-	// delete src;
+	ICharacter* bob = new Character("bob");
+
+	me->use(0, *bob);
+	me->use(1, *bob);
+
+	delete bob;
+	delete me;
+	delete src;
 	return 0;
+}
+
+int main(void)
+{
+	leak_main();
+	system("leaks game");
 }

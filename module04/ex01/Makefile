@@ -1,11 +1,10 @@
-NAME	= game
+NAME	= Animal
 
-SRC		=	AMateria.cpp Character.cpp Cure.cpp \
-			Ice.cpp  MateriaSource.cpp main.cpp
+SRC		= Animal.cpp main.cpp Dog.cpp Cat.cpp WrongCat.cpp WrongAnimal.cpp Brain.cpp
 
 OBJ		= ${SRC:.cpp=.o}
 
-CPPFLAGS = -Wall -Wextra  -Werror -std=c++98
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 RM		= rm -rf
 

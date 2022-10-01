@@ -1,38 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.cpp                                       :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/01 18:42:42 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/01 18:48:48 by waboutzo         ###   ########.fr       */
+/*   Created: 2022/09/29 11:30:07 by waboutzo          #+#    #+#             */
+/*   Updated: 2022/09/29 11:35:59 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AMateria.hpp"
+#include "Dog.hpp"
 
-AMateria::AMateria() : _type("no type yet")
-{}
-
-AMateria::AMateria(AMateria const& obj)
+Dog::Dog()
 {
+	std::cout << "Default Dog constructor called" << std::endl;
+	_type = "Dog";
+}
+
+Dog::Dog(const Dog& obj)
+{
+	std::cout << "Dog Copy constructor called" << std::endl;
 	*this = obj;
 }
 
-AMateria& AMateria::operator=(AMateria const& obj)
+Dog& Dog::operator=(const Dog& obj)
 {
-	(void) obj;
+	std::cout << "Dog Copy assignment operator called" << std::endl;
+	_type = obj._type;
 	return (*this);
 }
 
-AMateria::AMateria(std::string const & type) : _type(type)
-{}
-
-std::string const & AMateria::getType() const
+void Dog::makeSound() const
 {
-	return _type;
+	std::cout << "Woof Woof" << std::endl;
 }
 
-AMateria::~AMateria()
-{}
+Dog::~Dog()
+{
+	std::cout << "Dog Destructor called" << std::endl;
+}

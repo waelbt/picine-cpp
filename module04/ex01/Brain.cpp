@@ -1,38 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.cpp                                       :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/01 18:42:42 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/01 18:48:48 by waboutzo         ###   ########.fr       */
+/*   Created: 2022/09/29 13:10:51 by waboutzo          #+#    #+#             */
+/*   Updated: 2022/09/29 15:56:40 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AMateria.hpp"
+#include "Brain.hpp"
 
-AMateria::AMateria() : _type("no type yet")
-{}
-
-AMateria::AMateria(AMateria const& obj)
+Brain::Brain()
 {
+	std::cout << "Default Brain constructor called" << std::endl;
+}
+
+Brain::Brain(const Brain& obj)
+{
+	std::cout << "Brain Copy constructor called" << std::endl;
 	*this = obj;
 }
 
-AMateria& AMateria::operator=(AMateria const& obj)
+Brain& Brain::operator=(const Brain& obj)
 {
-	(void) obj;
+	std::cout << "Brain Copy assignment operator called" << std::endl;
+	for(int i = 0; i < 100 ;i++)
+		_ideas[i].assign(obj._ideas[i]);
 	return (*this);
 }
 
-AMateria::AMateria(std::string const & type) : _type(type)
-{}
-
-std::string const & AMateria::getType() const
+Brain::~Brain()
 {
-	return _type;
+	std::cout << "Brain Destructor called" << std::endl;
 }
-
-AMateria::~AMateria()
-{}

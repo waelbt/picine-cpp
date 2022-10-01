@@ -5,25 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/30 19:08:10 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/01 17:37:09 by waboutzo         ###   ########.fr       */
+/*   Created: 2022/10/01 19:21:28 by waboutzo          #+#    #+#             */
+/*   Updated: 2022/10/01 21:22:26 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #ifndef CHARACTER_HPP
-# define CHARACTER_HPP
-class ICharacter;
+#define CHARACTER_HPP
 
 #include "ICharacter.hpp"
 #include "AMateria.hpp"
+#include <iostream>
 
-class Character: public ICharacter
+class Character : public ICharacter
 {
 	private:
-		int _materia_count;
-		AMateria *_AMteria[4];
 		std::string _name;
+		int _counter;
+		AMateria *_materia[4];
 	public:
 		Character();
 		Character(Character const& obj);
