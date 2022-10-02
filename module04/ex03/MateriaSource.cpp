@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 19:05:26 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/01 22:22:52 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/10/02 17:37:08 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ MateriaSource& MateriaSource::operator=(MateriaSource const& obj)
 		if (_materia[i])
 			delete _materia[i];
 	for(int i = 0; i < 4; i++)
-		_materia[i] = obj._materia[i];
+		_materia[i] = obj._materia[i]->clone();
 	return (*this);
 }
 
@@ -39,6 +39,8 @@ void MateriaSource::learnMateria(AMateria* obj)
 {
 	if (_counter < 4)
 		_materia[_counter++] = obj;
+	else
+		std::cout << "the inventory is full" << std::endl;
 }
 
 AMateria* MateriaSource::createMateria(std::string const & type)

@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 21:32:51 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/02 00:08:43 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/10/02 17:37:52 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 #include "ICharacter.hpp"
 #include "MateriaSource.hpp"
 
-int leak_main()
+int main(void)
 {
 	IMateriaSource* src = new MateriaSource();
 	src->learnMateria(new Ice());
@@ -44,10 +44,4 @@ int leak_main()
 	delete me;
 	delete src;
 	return 0;
-}
-
-int main(void)
-{
-	leak_main();
-	system("leaks game");
 }

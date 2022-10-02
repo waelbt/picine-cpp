@@ -6,11 +6,13 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 19:23:30 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/01 22:00:13 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/10/02 17:09:20 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
+
+#include "AMateria.hpp"
 
 Character::Character() : _name("hamid"), _counter(0)
 {
@@ -35,7 +37,7 @@ Character& Character::operator=(Character const& obj)
 		if(_materia[i])
 			delete _materia[i];
 	for(int i = 0; i < 4;  i++)
-			_materia[i] = obj._materia[i];
+		_materia[i] = obj._materia[i]->clone();
 	_counter = obj._counter;
 	_name = obj._name;
 	return (*this);
@@ -72,6 +74,8 @@ void Character::use(int idx, ICharacter& target)
 {
 	if(idx < _counter && _materia[idx])
 		_materia[idx]->use(target);
+	else
+		std::cout << "* invlaid material *" << std::endl;
 }
 
 Character::~Character()

@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:19:05 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/09/29 15:49:15 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/10/02 21:15:02 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,10 @@ Cat& Cat::operator=(const Cat& obj)
 	std::cout << "Cat Copy assignment operator called" << std::endl;
 	_type = obj._type;
 	if(_brain)
+	{
 		delete _brain;
+		_brain = NULL;
+	}
 	if (obj._brain)
 	{
 		_brain = new Brain();

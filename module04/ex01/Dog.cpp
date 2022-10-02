@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:30:07 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/09/29 15:16:42 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/10/02 21:15:16 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,16 @@ Dog& Dog::operator=(const Dog& obj)
 {
 	std::cout << "Dog Copy assignment operator called" << std::endl;
 	_type = obj._type;
-	_brain = obj._brain;
+	if(_brain)
+	{
+		delete _brain;
+		_brain = NULL;
+	}
+	if (obj._brain)
+	{
+		_brain = new Brain();
+		*_brain = *obj._brain;
+	}
 	return (*this);
 }
 
