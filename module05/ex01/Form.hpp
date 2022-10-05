@@ -1,38 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.cpp                                       :+:      :+:    :+:   */
+/*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/01 18:42:42 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/03 23:00:12 by waboutzo         ###   ########.fr       */
+/*   Created: 2022/10/03 18:51:14 by waboutzo          #+#    #+#             */
+/*   Updated: 2022/10/03 18:58:38 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AMateria.hpp"
+#ifndef FORM_HPP
+#define FORM_HPP
 
-AMateria::AMateria() : _type("no type yet")
-{}
+#include <iostream>
 
-AMateria::AMateria(AMateria const& obj)
+class Form
 {
-	*this = obj;
-}
+	private:
+		const std::string _name;
+		bool _signed;
+		
+};
 
-AMateria& AMateria::operator=(AMateria const& obj)
-{
-	(void) obj;
-	return (*this);
-}
-
-AMateria::AMateria(std::string const & type) : _type(type)
-{}
-
-std::string const & AMateria::getType() const
-{
-	return _type;
-}
-
-AMateria::~AMateria()
-{}
+#endif
