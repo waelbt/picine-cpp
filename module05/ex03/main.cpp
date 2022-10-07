@@ -6,21 +6,33 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 14:26:28 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/05 17:25:13 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/10/07 17:40:30 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
+#include "Intern.hpp"
 
 int main(void)
 {
 	try
 	{
-		Bureaucrat bureaucrat("bob", 5);
+		Bureaucrat bureaucrat("bob", 1);
+		Intern someRandomIntern;
+		Form* rrf;
+		rrf = someRandomIntern.makeForm("shrubbery creation", "Bender");
+		rrf->beSigned(bureaucrat);
+		bureaucrat.signForm(*rrf);
+		rrf->execute(bureaucrat);
+		delete rrf;
 	}
-	catch(std::exception& e)
+	catch(const std::exception& e)
 	{
-		std::cout << e.what() << std::endl;
+		std::cerr << e.what() << std::endl;
 	}
 	return (0);
 }

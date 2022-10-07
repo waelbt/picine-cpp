@@ -1,10 +1,10 @@
 NAME	= AFrom
 
-SRC		= Bureaucrat.cpp PresidentialPardonForm.cpp ShrubberyCreationForm.cpp Form.cpp RobotomyRequestForm.cpp main.cpp
+SRC		= Bureaucrat.cpp PresidentialPardonForm.cpp ShrubberyCreationForm.cpp Form.cpp RobotomyRequestForm.cpp main.cpp Intern.cpp
 
 OBJ		= ${SRC:.cpp=.o}
 
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98 
 
 RM		= rm -rf
 

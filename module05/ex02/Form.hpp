@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 15:25:09 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/05 17:14:18 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/10/07 12:24:48 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 #define FORM_HPP
 
 #include <iostream>
+#include <unistd.h>
 #include "Bureaucrat.hpp"
+#include <fstream>
 
 class Bureaucrat;
 
@@ -34,6 +36,7 @@ class Form
 		const bool& getStatus() const;
 		const int& getSigneGrade() const;
 		const int& getExecuteGrade() const;
+		virtual void execute(Bureaucrat const & executor) const = 0;
 		void beSigned(const Bureaucrat& bureaucrat);
 		class GradeTooHighException : public std::exception
 		{	public:
@@ -43,5 +46,7 @@ class Form
 				virtual const char * what() const throw();};
 		~Form();
 };
+
+std::ostream& operator<<(std::ostream& o, Form const& obj);
 
 #endif

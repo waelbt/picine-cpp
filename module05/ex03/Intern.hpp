@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Intern.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/05 14:26:28 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/05 17:38:58 by waboutzo         ###   ########.fr       */
+/*   Created: 2022/10/07 17:09:15 by waboutzo          #+#    #+#             */
+/*   Updated: 2022/10/07 17:31:07 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef INTERN_HPP
+#define INTERN_HPP
+
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
-int main(void)
+// class Form;
+// class ShrubberyCreationForm;
+// class RobotomyRequestForm;
+// class PresidentialPardonForm;
+class Intern
 {
-	try
-	{
-		Bureaucrat bureaucrat("bob", 50);
-		Form form("form", 42, 13);
+	public:
+		Intern();
+		Intern(Intern const& obj);
+		Form* makeForm(std::string Formn, std::string target);
+		Intern& operator=(Intern const& obj);
+		~Intern();
+};
 
-		bureaucrat.signForm(form);
-		form.beSigned(bureaucrat);
-	}
-	catch(std::exception& e)
-	{
-		std::cout << e.what() << std::endl;
-	}
-	return (0);
-}
+#endif
