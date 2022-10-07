@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 14:26:28 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/07 17:40:30 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/10/07 18:07:34 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int main(void)
 		Bureaucrat bureaucrat("bob", 1);
 		Intern someRandomIntern;
 		Form* rrf;
-		rrf = someRandomIntern.makeForm("shrubbery creation", "Bender");
+		rrf = someRandomIntern.makeForm("shrubberdway creation", "Bender");
 		rrf->beSigned(bureaucrat);
 		bureaucrat.signForm(*rrf);
 		rrf->execute(bureaucrat);
