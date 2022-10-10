@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 14:38:00 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/05 15:51:57 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/10/10 09:56:19 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,14 +68,14 @@ void Bureaucrat::DecrementGrade()
 		throw (GradeTooLowException());
 }
 
-const char * Bureaucrat::GradeTooHighException::what() const throw()
+const char * Bureaucrat::GradeTooHighException::what() const _NOEXCEPT
 {
-	return "bureaucrat grade too high exception.";
+	return "** bureaucrat grade too high exception **";
 }
 
 const char * Bureaucrat::GradeTooLowException::what() const throw()
 {
-	return "bureaucrat grade low high exception.";
+	return "** bureaucrat grade low exception **";
 }
 
 Bureaucrat::~Bureaucrat()

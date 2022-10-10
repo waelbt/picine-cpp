@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 17:09:15 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/07 18:03:49 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/10/09 21:01:00 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class Intern
 		Intern& operator=(Intern const& obj);
 		class InvalidFormException : public std::exception
 		{	public:
-				virtual const char * what() const throw();};
+				const char * what() const throw();};
 		~Intern();
 };
 

@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 15:25:11 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/06 15:28:25 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/10/09 21:00:12 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,12 +75,12 @@ void Form::beSigned(const Bureaucrat& bureaucrat)
 
 const char * Form::GradeTooHighException::what() const throw()
 {
-	return "* Form: Grade Too High Exception *";
+	return "** Form: Grade Too High Exception **";
 }
 
 const char * Form::GradeTooLowException::what() const throw()
 {
-	return "* Form: Grade Too Low Exception *";
+	return "** Form: Grade Too Low Exception **";
 }
 
 std::ostream& operator<<(std::ostream& o, Form const& obj)

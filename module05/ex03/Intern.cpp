@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 17:09:14 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/07 18:08:22 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/10/09 21:01:10 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Intern::Intern(Intern const& obj)
 
 const char * Intern::InvalidFormException::what() const throw()
 {
-	return "* Intern : Invalid form *";
+	return "** Intern : Invalid form **";
 }
 
 Form* Intern::makeForm(std::string form, std::string target)
