@@ -1,35 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   function_template.hpp                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: waboutzo <waboutzo@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/05 04:04:47 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/19 17:38:23 by waboutzo         ###   ########.fr       */
+/*   Created: 2022/10/19 16:45:51 by waboutzo          #+#    #+#             */
+/*   Updated: 2022/10/19 17:01:37 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+#ifndef FUNCTION_TEMPLATE_HPP
+#define FUNCTION_TEMPLATE_HPP
+
 
 #include <iostream>
-#include <iomanip>
-//#include <ctype.h>
-#include "Contact.hpp"
 
-class PhoneBook
+template <typename T>
+void swap(T& x, T&y)
 {
-	private:
-		int		index;
-		Contact	c[8];
-	public:
-		PhoneBook();
-		void add_contact( void );
-		int display_contacts( void );
-		void get_contact(int id);
-};
+	T tmp;
 
-int ft_isdigit(std::string str, int flag);
-int	ft_getline(std::string *str, const std::string message);
+	tmp = x;
+	x = y;
+	y = tmp;
+}
+
+template <typename T>
+T& max(T& x, T&y)
+{
+	return (x > y) ? x : y;
+}
+
+template <typename T>
+T& min(T& x, T&y)
+{
+	return (x < y) ? x : y;
+}
+
 #endif
