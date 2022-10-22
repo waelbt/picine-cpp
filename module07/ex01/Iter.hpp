@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Iter.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: waboutzo <waboutzo@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 17:17:22 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/20 16:53:38 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/10/21 12:30:37 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,10 @@
 #include <iostream>
 
 template <typename T>
-void Iter(T* ar, size_t len, void (*f) (T&))
+void iter(T* ar, size_t len, void (*f) (T const &))
 {
 	for(size_t i = 0; i < len; i++)
 		f(ar[i]);
-}
-
-template <typename T>
-void f(T& n)
-{
-	n += 13;
 }
 
 #endif

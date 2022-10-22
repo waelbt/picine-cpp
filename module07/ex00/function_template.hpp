@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   function_template.hpp                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: waboutzo <waboutzo@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 16:45:51 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/19 17:01:37 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/10/21 12:12:18 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,13 @@ void swap(T& x, T&y)
 }
 
 template <typename T>
-T& max(T& x, T&y)
+const T& max(const T& x,const T&y)
 {
 	return (x > y) ? x : y;
 }
 
 template <typename T>
-T& min(T& x, T&y)
+const T& min(const T& x, const T&y)
 {
 	return (x < y) ? x : y;
 }
