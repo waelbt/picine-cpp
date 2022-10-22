@@ -4,16 +4,8 @@
 
 int main(void)
 {
-	Animal* animal[4];
-
-	for(int i = 0; i < 4; i++)
+	Dog basic;
 	{
-		if (i < 2)
-			animal[i] = new Cat();
-		else
-			animal[i] = new Dog();
+		Dog tmp = basic;
 	}
-	for(int i = 0; i < 4; i++)
-		delete animal[i];
-	return 0;
 }

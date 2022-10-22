@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:30:07 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/02 21:15:29 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/10/22 13:09:12 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Dog::Dog()
 	_brain = new Brain();
 }
 
-Dog::Dog(const Dog& obj)
+Dog::Dog(const Dog& obj) : _brain(NULL)
 {
 	std::cout << "Dog Copy constructor called" << std::endl;
 	*this = obj;

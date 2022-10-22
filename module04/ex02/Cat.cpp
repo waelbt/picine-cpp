@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:19:05 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/02 21:15:25 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/10/22 13:09:08 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Cat::Cat()
 	_brain = new Brain();
 }
 
-Cat::Cat(const Cat& obj)
+Cat::Cat(const Cat& obj) : _brain(NULL)
 {
 	std::cout << "Cat Copy constructor called" << std::endl;
 	*this = obj;
