@@ -53,6 +53,10 @@
 		"utility": "cpp",
 		"cmath": "cpp",
 		"vector": "cpp",
-		"iomanip": "cpp"
+		"iomanip": "cpp",
+		"__split_buffer": "cpp",
+		"stack": "cpp",
+		"array": "cpp",
+		"deque": "cpp"
 	}
 }

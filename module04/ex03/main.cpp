@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 21:32:51 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/02 17:37:52 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/10/28 17:12:46 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ int main(void)
 	me->equip(tmp);
 	tmp = src->createMateria("cure");
 	me->equip(tmp);
-	me->equip(0);
 
 	ICharacter* bob = new Character("bob");
 

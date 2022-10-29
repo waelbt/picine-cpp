@@ -1,6 +1,6 @@
-NAME	= Bureaucrat
+NAME	= easyfind
 
-SRC		= main.cpp
+SRC		= Span.cpp main.cpp
 
 OBJ		= ${SRC:.cpp=.o}
 
