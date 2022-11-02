@@ -1,30 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/24 17:15:24 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/29 16:15:24 by waboutzo         ###   ########.fr       */
+/*   Created: 2022/10/13 10:23:37 by waboutzo          #+#    #+#             */
+/*   Updated: 2022/10/13 11:16:21 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_CPP
-#define FRAGTRAP_CPP
+#include "Base.hpp"
 
-#include "ClapTrap.hpp"
-
-class FragTrap : virtual public ClapTrap
+int main(void)
 {
+	Base *base = generate();
 
-	public:
-		FragTrap();
-		FragTrap(const std::string name);
-		FragTrap(const FragTrap& obj);
-		FragTrap& operator=(const FragTrap& obj);
-		void highFivesGuys(void);
-		~FragTrap();
-};
-
-#endif
+	identify(base);
+	identify(*base);
+	return 0;
+}

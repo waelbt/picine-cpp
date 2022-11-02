@@ -1,10 +1,10 @@
-NAME	= span
+NAME	= Static_cast
 
-SRC		= Span.cpp main.cpp
+SRC		= main.cpp 
 
 OBJ		= ${SRC:.cpp=.o}
 
-CPPFLAGS = -Wall -Wextra -Werror -fsanitize=address -std=c++98
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98 
 
 RM		= rm -rf
 

@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   Data.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/24 17:15:24 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/29 16:15:24 by waboutzo         ###   ########.fr       */
+/*   Created: 2022/10/12 17:13:54 by waboutzo          #+#    #+#             */
+/*   Updated: 2022/10/12 17:42:18 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_CPP
-#define FRAGTRAP_CPP
+#include "Data.hpp"
 
-#include "ClapTrap.hpp"
 
-class FragTrap : virtual public ClapTrap
+Data::Data(int a, int b, int c) : _a(a), _b(b), _c(c)
 {
+}
 
-	public:
-		FragTrap();
-		FragTrap(const std::string name);
-		FragTrap(const FragTrap& obj);
-		FragTrap& operator=(const FragTrap& obj);
-		void highFivesGuys(void);
-		~FragTrap();
-};
+uintptr_t serialize(Data* ptr)
+{
+	return reinterpret_cast<uintptr_t>(ptr);
+}
 
-#endif
+Data* deserialize(uintptr_t raw)
+{
+	return reinterpret_cast<Data *>(raw);
+}
+
+std::ostream& operator<<(std::ostream& o,const Data& obj)
+{
+	o << obj._a << " , " << obj._b << " , " << obj._c; 
+	return o;
+}

@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 10:13:50 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/11/02 01:09:46 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/10/13 16:00:23 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ Base * generate(void)
 {
 	int random;
 
-	random = time(NULL) % 3;
+	srand (time(NULL));
+	random = rand() % 3;
 	switch (random)
 	{
 		case 0:

@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   MutantStack.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/24 17:15:24 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/29 16:15:24 by waboutzo         ###   ########.fr       */
+/*   Created: 2022/10/22 16:15:55 by waboutzo          #+#    #+#             */
+/*   Updated: 2022/11/01 18:25:01 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_CPP
-#define FRAGTRAP_CPP
+#ifndef MUTANTSTACK_HPP
+#define MUTANTSTACK_HPP
 
-#include "ClapTrap.hpp"
+#include <iostream>
+#include <stack>
 
-class FragTrap : virtual public ClapTrap
+template <class T>
+class MutantStack : public std::stack<T>
 {
-
-	public:
-		FragTrap();
-		FragTrap(const std::string name);
-		FragTrap(const FragTrap& obj);
-		FragTrap& operator=(const FragTrap& obj);
-		void highFivesGuys(void);
-		~FragTrap();
+	
 };
 
-#endif
+
+#endif 

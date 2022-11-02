@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   Data.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/24 17:15:24 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/29 16:15:24 by waboutzo         ###   ########.fr       */
+/*   Created: 2022/10/12 17:12:51 by waboutzo          #+#    #+#             */
+/*   Updated: 2022/10/12 17:39:36 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_CPP
-#define FRAGTRAP_CPP
+#ifndef DATA_HPP
+#define DATA_HPP
 
-#include "ClapTrap.hpp"
+#include <stdint.h>
+#include <iostream>
 
-class FragTrap : virtual public ClapTrap
+struct Data
 {
-
-	public:
-		FragTrap();
-		FragTrap(const std::string name);
-		FragTrap(const FragTrap& obj);
-		FragTrap& operator=(const FragTrap& obj);
-		void highFivesGuys(void);
-		~FragTrap();
+	int _a;
+	int _b;
+	int _c;
+	Data(int a, int b, int c);
 };
+
+uintptr_t serialize(Data* ptr);
+Data* deserialize(uintptr_t raw);
+std::ostream& operator<<(std::ostream& o,const Data& obj);
 
 #endif

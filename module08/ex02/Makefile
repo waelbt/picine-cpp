@@ -1,10 +1,10 @@
 NAME	= span
 
-SRC		= Span.cpp main.cpp
+SRC		= main.cpp
 
 OBJ		= ${SRC:.cpp=.o}
 
-CPPFLAGS = -Wall -Wextra -Werror -fsanitize=address -std=c++98
+CPPFLAGS = -Wall -Wextra -Werror -fsanitize=address -std=c++11
 
 RM		= rm -rf
 
