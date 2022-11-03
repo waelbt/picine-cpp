@@ -6,42 +6,29 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 17:12:51 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/11/02 05:18:08 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/11/04 00:04:13 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <iomanip>
 #include <cctype>
-
-int fraction_part(double number)
-{
-	double tmp = number;
-
-	if(tmp == static_cast<long>(number))
-		return 0;
-	return 1;
-}
+#include <sstream>
 
 
 int main(int argc, char **argv)
 {
-	std::string test(argv[1]);
+	if(argc != 2)
+		return 0;
+	std::stringstream test(argv[1]);
 	double tmp;
 	char	c;
 
-	tmp = std::stod(test);
+	test >> tmp;
+	std::cout.flags(std::ios::fixed);
 	c = static_cast<char>(tmp);
-	std::cout << "double value  " << tmp;
-	if (!fraction_part(tmp))
-		std::cout << ".0";
-	std::cout << std::endl;
-	std::cout << "flaot value  " << static_cast<float>(tmp);
-	if (!fraction_part(tmp))
-		std::cout << ".0f";
-	else
-		std::cout << "f";
-	std::cout << std::endl;
+	std::cout << std::setprecision(1) << "double value  " << tmp << std::endl;
+	std::cout << "flaot value  " << static_cast<float>(tmp) << "f" << std::endl;
 	std::cout << "int value  " << static_cast<int>(tmp) << std::endl;
 	std::cout << "char value  ";
 	if(isprint(c))
