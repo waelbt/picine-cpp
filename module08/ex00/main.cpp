@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 16:16:24 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/29 10:50:33 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/11/08 10:10:20 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ int main(void)
                 vec.push_back(9);
                 vec.push_back(10);
                 vec.push_back(-1);
-                vec.push_back(0);
                 easyfind(vec, -1);
                 easyfind(vec, 22);
             }

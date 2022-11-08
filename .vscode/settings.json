@@ -60,6 +60,7 @@
 		"deque": "cpp",
 		"*.tpp": "cpp",
 		"__functional_base_03": "cpp",
-		"sstream": "cpp"
+		"sstream": "cpp",
+		"list": "cpp"
 	}
 }

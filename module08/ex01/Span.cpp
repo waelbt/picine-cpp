@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 16:15:55 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/11/07 05:43:50 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/11/08 12:19:38 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ void Span::print_span()
         std::cout << " " << _vector.at(i);
     std::cout << std::endl;
 }
+
 int Span::shortestSpan()
 {
     int min;

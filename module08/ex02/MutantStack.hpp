@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 16:15:55 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/11/08 06:38:11 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/11/08 21:11:55 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <stack>
+#include <list>
 
 template <typename T>
 class MutantStack : public std::stack<T>

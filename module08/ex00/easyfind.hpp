@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 16:15:55 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/29 10:47:44 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/11/08 12:11:48 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,7 @@
 
 
 #include <vector>
-#include <stack>
 #include <iostream>
-#include <algorithm>
-#include <iterator>
-#include <sstream>
 #include <array>
 
 
