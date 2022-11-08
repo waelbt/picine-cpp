@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 16:45:51 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/21 12:12:18 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/11/06 22:20:41 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,4 @@ const T& min(const T& x, const T&y)
 {
 	return (x < y) ? x : y;
 }
-
 #endif

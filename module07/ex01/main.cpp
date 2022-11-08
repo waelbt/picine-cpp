@@ -6,11 +6,11 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 17:17:26 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/21 12:33:06 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/11/06 16:51:50 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "iter.hpp"
+#include "Iter.hpp"
 
 class Awesome
 {
@@ -23,7 +23,7 @@ class Awesome
 std::ostream & operator<<( std::ostream & o, Awesome const & rhs ) { o << rhs.get(); return o; }
 
 template< typename T >
-void print( T const & x ) { std::cout << x << std::endl; return; }
+void print( T const& x ) { std::cout << x << std::endl; return; }
 
 int main() {
     int tab[] = { 0, 1, 2, 3, 4 }; 

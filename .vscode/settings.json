@@ -57,6 +57,9 @@
 		"__split_buffer": "cpp",
 		"stack": "cpp",
 		"array": "cpp",
-		"deque": "cpp"
+		"deque": "cpp",
+		"*.tpp": "cpp",
+		"__functional_base_03": "cpp",
+		"sstream": "cpp"
 	}
 }

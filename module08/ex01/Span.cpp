@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 16:15:55 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/31 17:55:45 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/11/07 05:43:50 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,12 +75,6 @@ int Span::shortestSpan()
     }
     return min;
 }
-
-// void Span::Advanced_Add_Number(Iterator first, Iterator end)
-// {
-//     for(Iterator it = first; it < end; it++)
-//         addNumber(*it);
-// }
 
 int Span::longestSpan()
 {

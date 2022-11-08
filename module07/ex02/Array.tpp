@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 15:35:45 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/22 15:36:26 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/11/07 02:16:51 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,14 @@ template <typename T>
 Array<T>::Array()
 {
 	_array = NULL;
+	_n = 0;
+}
+
+template <typename T>
+Array<T>::Array(unsigned int n)
+{
+	_array = new T[n];
+	_n = n;
 }
 
 template <typename T>
@@ -61,13 +69,6 @@ T& Array<T>::operator[] (unsigned int index) const
 	if(index >= _n)
 		throw OutOfBoundException();
 	return _array[index];
-}
-
-template <typename T>
-Array<T>::Array(unsigned int n)
-{
-	_array = new T[n];
-	_n = n;
 }
 
 template <typename T>
