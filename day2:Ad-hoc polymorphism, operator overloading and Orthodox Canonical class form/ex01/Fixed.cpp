@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 15:00:04 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/11/10 01:13:42 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/11/24 02:12:36 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Fixed::Fixed(const int integer)
 
 Fixed::Fixed(const float number)
 {
-	_raw = roundf(number*(float)(1<<_bits));
+	_raw = roundf(number * (1<<_bits));
 	std::cout << "Float constructor called " << std::endl;
 }
 
@@ -40,8 +40,7 @@ Fixed::Fixed(const Fixed& obj)
 Fixed& Fixed::operator=(const Fixed& obj)
 {
 	std::cout << "Copy assignment operator called " << std::endl;
-	if (this != &obj)
-		_raw = obj.getRawBits();
+	_raw = obj.getRawBits();
 	return *this;
 }
 
@@ -69,7 +68,7 @@ int Fixed::toInt( void ) const
 
 float Fixed::toFloat( void ) const
 {
-	return ((float)_raw / (float)(1<<_bits));
+	return ((float)_raw / (1<<_bits));
 }
 
 std::ostream& operator<<(std ::ostream &o, Fixed const & rhs)

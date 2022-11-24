@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 15:25:09 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/09 21:01:37 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/11/24 02:56:07 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ class Form
 		void beSigned(const Bureaucrat& bureaucrat);
 		class GradeTooHighException : public std::exception
 		{	public:
-				const char * what() const throw();};
+				const char * what() const _NOEXCEPT;};
 		class GradeTooLowException : public std::exception
 		{	public:
 				const char * what() const throw();};

@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 22:43:44 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/10/31 21:23:33 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/11/24 03:08:49 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Fixed::Fixed(const int integer)
 
 Fixed::Fixed(const float number)
 {
-	_raw = roundf(number*(float)(1<<_bits));
+	_raw = roundf(number * (1<<_bits));
 	std::cout << "Float constructor called " << std::endl;
 }
 
@@ -40,8 +40,7 @@ Fixed::Fixed(const Fixed& obj)
 Fixed& Fixed::operator=(const Fixed& obj)
 {
 	std::cout << "Copy assignment operator called " << std::endl;
-	if (this != &obj)
-		_raw = obj.getRawBits();
+	_raw = obj.getRawBits();
 	return *this;
 }
 
@@ -69,7 +68,7 @@ int Fixed::toInt( void ) const
 
 float Fixed::toFloat( void ) const
 {
-	return ((float)_raw / (float)(1<<_bits));
+	return ((float)_raw / (1 << _bits));
 }
 
 bool Fixed::operator>(const Fixed& obj) const
@@ -109,7 +108,7 @@ bool Fixed::operator==(const Fixed& obj) const
 
 bool Fixed::operator!=(const Fixed& obj) const
 {
-	if (_raw == obj._raw)
+	if (_raw != obj._raw)
 		return true;
 	return false;
 }
@@ -118,7 +117,7 @@ Fixed  Fixed::operator+(const Fixed& obj) const
 {
 	Fixed tmp;
 
-	tmp._raw = (double)(this->_raw + obj._raw);
+	tmp._raw = this->_raw + obj._raw;
 	return (tmp);
 }
 
@@ -126,7 +125,7 @@ Fixed  Fixed::operator-(const Fixed& obj) const
 {
 	Fixed tmp;
 
-	tmp._raw = (double)(this->_raw - obj._raw);
+	tmp._raw = this->_raw - obj._raw;
 	return (tmp);
 }
 
@@ -134,7 +133,7 @@ Fixed  Fixed::operator*(const Fixed& obj) const
 {
 	Fixed tmp;
 
-	tmp._raw = (double)(this->_raw * obj._raw) / (1<<_bits);
+	tmp._raw = (this->_raw * obj._raw) / (1<<_bits);
 	return (tmp);
 }
 
@@ -142,7 +141,7 @@ Fixed  Fixed::operator/(const Fixed& obj) const
 {
 	Fixed tmp;
 
-	tmp._raw = ((double)this->_raw / obj._raw) * (1<<_bits);
+	tmp._raw = ((float)this->_raw / obj._raw) * (1<<_bits);
 	return (tmp);
 }
 

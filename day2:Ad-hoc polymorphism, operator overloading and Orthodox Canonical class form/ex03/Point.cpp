@@ -6,7 +6,7 @@
 /*   By: waboutzo <waboutzo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 14:26:11 by waboutzo          #+#    #+#             */
-/*   Updated: 2022/09/21 17:23:43 by waboutzo         ###   ########.fr       */
+/*   Updated: 2022/11/24 03:06:00 by waboutzo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ Fixed Point::area(const Point& a, const Point& b, const Point& c)
 	b.getx() * (c.gety() - a.gety()) +
 	c.getx() * (a.gety() - b.gety())) / 2));
 
-	return  (tmp >= 0) ? tmp : (tmp * Fixed(-1));
+	return  (tmp >= 0) ? tmp : (tmp * -1);
 }
 
 bool Point::operator==(const Point& obj) const
